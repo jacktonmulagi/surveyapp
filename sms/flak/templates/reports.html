@@ -1,0 +1,145 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<META HTTP-EQUIV="refresh" CONTENT="20">
+<h2>sms send</h2>
+<div >
+    <p>sms send in the past:</p>
+    <table id="print-content" class="table table-striped">
+
+
+                <tr>
+
+                <th>date</th>
+               <th>Total sms send</th>
+
+
+
+
+          </tr>
+
+
+
+
+
+                {% for row in totalsms %}
+                <tr>
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+
+
+                    <td>
+
+
+
+
+
+                    </td>
+
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button onclick="window.print()">Print </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                </tbody>
+
+
+            </table>
+
+
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </div>
+
+
+
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+
+                {% endfor  %}
+
+
+                </tbody>
+
+
+            </table>
+</div>
+{% endblock %}
+<script>
+function printContent(el){
+var restorepage = $('body').html();
+var printcontent = $('#' + el).clone();
+var enteredtext = $('#text').val();
+$('body').empty().html(printcontent);
+window.print();
+$('body').html(restorepage);
+$('#text').html(enteredtext);
+}
+</script>
+<textarea id="text"></textarea>
