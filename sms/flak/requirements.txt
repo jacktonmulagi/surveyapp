@@ -28,5 +28,5 @@ Resource==0.2.1
 schema==0.7.2
 six==1.14.0
 tables==3.6.1
-urllib3==1.25.9
+urllib3==1.26.5
 Werkzeug==1.0.1
